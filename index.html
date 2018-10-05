@@ -16,6 +16,8 @@
     <div class=InputSection>
       <div class=inputs>
         <input placeholder=This></input>
+      <text>or</text>
+        <input placeholder=That></input>
       </div>
       <div class="resultsection">
       </div>
@@ -26,7 +28,7 @@
      <script>
        $(function() {
          $('.resultsection').hide()
-         var add_option = function() {
+         var add_option = function () {
            $('.inputs').append('<input></input>')
          }
          $('.add').click(add_option)
