@@ -2,19 +2,35 @@
 <html lang=en>
   <head>
     <meta charset=utf-8>
+    <style media="screen">
+      img {
+        width:30px;
+        height:30px;
+      }
+    </style>
     <title>This or that</title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
   </head>
-  <body style="background-color:powderblue;">
-    <h1 style="font-family:courier;"align=middle>This or that?</h1>
-    <div align=middle>
-      <div>
+  <body>
+    <h1>THIS OR THAT?</h1>
+    <div class=InputSection>
+      <div class=inputs>
         <input placeholder=This></input>
-        <div>
-          <input placeholder=That></input>
-        </div>
       </div>
-        <button><img src=https://upload.wikimedia.org/wikipedia/commons/1/1f/Add-circular-button-thin-symbol.svg style=width:15px;height:15px></button>
+      <div class="resultsection">
+      </div>
+        <button class=add><img src=./+.png></button>
     </div>
-    <button>Choose</button>
+    <button class=choose>Choose</button>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script>
+       $(function() {
+         $('.resultsection').hide()
+         var add_option = function() {
+           $('.inputs').append('<input></input>')
+         }
+         $('.add').click(add_option)
+       })
+     </script>
   </body>
 </html>
